@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shoping Bill</title>
+</head>
+<body>
+    <h2 align="center">Shopping Bill</h2>
+    <table border="|" cellpadding="8"
+            cellpadding="0" align="centre"
+            width="70%">
+            <thread>
+                <tr bgcolour="lightblue">
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price (₹)</th>
+                    <th>Amount (₹)</th>    
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>Pen</td>
+                    <td>Book</td>
+                    <td>Bag</td> 
+                </tr>
+                <tr>
+                    <td>Pen</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Book</td>
+                    <td>1</td>
+                    <td>200</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Bag</td>
+                    <td>1</td>
+                    <td>500</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr bgcolour="Lightblue">
+                    <th colspan="3">Total</th>
+                    <th>850</th>
+                </tr>
+            </tfoot>
+    </table>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
